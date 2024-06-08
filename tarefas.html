@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas do Casamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #fff;
+        }
+        .task-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .task-list li {
+            background-color: #333;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .task-list li.completed {
+            text-decoration: line-through;
+            color: #777;
+        }
+        .declaration {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        iframe {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tarefas do Casamento</h1>
+    <ul class="task-list" id="taskList">
+        <li>Resolver documentacao para casamento civil</li>
+        <li>Dizer que ama a Thalita diariamente</li>
+        <li>Mandar o Gama liberar a casa, que a gente cuida direitinho</li>
+        <li>Verificar valor de transferencia para a Sao Jose</li>
+        <li>Se declarar para a noiva mais linda</li>
+    </ul>
+    <div class="declaration">
+        Guilherme, você é o noivo mais incrível! <br> Vamos fazer desse momento inesquecível juntos.
+    </div>
+    <iframe id="standBy" width="560" height="315" src="https://www.youtube.com/embed/2mSGCr49ZIw?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <script>
+        // Seleciona todos os itens da lista de tarefas
+        const tasks = document.querySelectorAll('.task-list li');
+
+        // Adiciona um evento de clique a cada item
+        tasks.forEach(task => {
+            task.addEventListener('click', () => {
+                task.classList.toggle('completed');
+            });
+        });
+    </script>
+</body>
+</html>
